@@ -9,6 +9,22 @@ The repository is intended to be used as a future reference: the directory struc
 
 > **Important scope note:** This repository contains the design artifacts and recorded results of the flows. The exact commercial EDA installation, PDK, technology files, standard-cell libraries, extraction decks, and environment variables used to generate the results are not included in the repository. Therefore, reproducing the results requires access to a compatible EDA environment and the same or equivalent technology collateral.
 
+## Portfolio summary
+
+This project demonstrates two complementary ASIC implementation paths:
+
+- **Full-custom cells:** transistor-level AND and NAND gates taken through
+  schematic simulation, manual layout, DRC/LVS-oriented verification, and
+  GDSII stream-out.
+- **Semi-custom digital block:** a Verilog vending-machine FSM taken through
+  RTL simulation, synthesis with SDC timing constraints, mapped-netlist
+  reporting, logical-equivalence artifacts, timing checkpoints, and GDSII
+  output.
+
+The repository preserves both source inputs and recorded tool outputs so that
+the relationship between design intent, verification, and physical layout can
+be inspected stage by stage.
+
 ---
 
 ## 1. Repository information
